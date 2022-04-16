@@ -1,0 +1,17 @@
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: voting-app-service
+  labels:
+    author: Devendra
+    name: voting-app-service
+
+spec:
+  type: LoadBalancer
+  selector:
+    name: voting-app
+  ports:
+    - targetPort: 80
+      port: 80
